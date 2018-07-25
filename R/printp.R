@@ -2,6 +2,7 @@
 #'
 #' @param val A p-value to format.
 #' @return A string formatted in APA style with the =/< sign and the p-value
+#' @export
 
 printp <- function(val) {
 		if (val == 1) {
