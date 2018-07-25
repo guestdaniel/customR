@@ -8,7 +8,7 @@ correct_p <- function(objs) {
 	# Identify number of rows and the column containing p-values in each object
 	n_rows = sapply(objs, nrow)
 	col_names = sapply(objs, colnames)
-	col_arrays = sapply(sapply(col_names, FUN=str_detect, pattern="Pr\\(>"), as.numeric)
+	col_arrays = sapply(sapply(col_names, FUN=stringr::str_detect, pattern="Pr\\(>"), as.numeric)
 	col_idxs = sapply(col_arrays, which.max)
 	# Extract p values
 	p_values = numeric()
